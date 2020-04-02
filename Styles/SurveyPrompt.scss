@@ -1,0 +1,29 @@
+﻿@import "./App.scss";
+
+.ui-survey-prompt {
+    width: 300px;
+}
+
+.ui-survey-prompt--full-width {
+    width: 100% !important;
+}
+
+.ui-survey-prompt__default {
+    background-color: $infodoc-indigo-medium;
+}
+
+.ui-survey-prompt__success {
+    background-color: $success-medium;
+}
+
+.ui-survey-prompt__error {
+    background-color: $error-medium;
+}
+
+.ui-survey-prompt__faktura {
+    background-color: $faktura-indigo-medium;
+}
+
+.ui-survey-prompt__timebok {
+    background-color: $timebok-purple-medium;
+}

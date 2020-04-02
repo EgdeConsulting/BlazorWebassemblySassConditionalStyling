@@ -1,0 +1,20 @@
+﻿.ui-survey-prompt {
+  width: 300px; }
+
+.ui-survey-prompt--full-width {
+  width: 100% !important; }
+
+.ui-survey-prompt__default {
+  background-color: #C8E2F4; }
+
+.ui-survey-prompt__success {
+  background-color: #81C784; }
+
+.ui-survey-prompt__error {
+  background-color: #EF9A9A; }
+
+.ui-survey-prompt__faktura {
+  background-color: #C5CAE9; }
+
+.ui-survey-prompt__timebok {
+  background-color: #D1C4E9; }

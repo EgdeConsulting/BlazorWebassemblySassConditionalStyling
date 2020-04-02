@@ -1,0 +1,14 @@
+[
+  {
+    "outputFile": "wwwroot/css/App.css",
+    "inputFile": "Styles/App.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/Index.css",
+    "inputFile": "Styles/Index.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/SurveyPrompt.css",
+    "inputFile": "Styles/SurveyPrompt.scss"
+  }
+]

@@ -1,0 +1,49 @@
+﻿@using BlazorComponentUtilities
+<div class="alert mt-4 @HostClass" role="alert">
+    <span class="oi oi-pencil mr-2" aria-hidden="true"></span>
+    <strong>@Title</strong>
+
+    <span class="text-nowrap">
+        Please take our
+        <a target="_blank" class="font-weight-bold" href="https://go.microsoft.com/fwlink/?linkid=2121313">brief survey</a>
+    </span>
+    and tell us what you think.
+</div>
+
+@code {
+    // Demonstrates how a parent component can supply parameters
+    [Parameter]
+    public string Title { get; set; }
+
+    [Parameter]
+    public string HostClass { get; set; }
+
+    [Parameter]
+    public bool FullWidth { get; set; }
+
+    [Parameter]
+    public PromptType Type { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        HostClass = CssBuilder
+            .Empty()
+            .AddClass("ui-survey-prompt")
+            .AddClass("ui-survey-prompt--full-width", when: FullWidth)
+            .AddClass("ui-survey-prompt__default", when: Type == PromptType.Default)
+            .AddClass("ui-survey-prompt__success", when: Type == PromptType.Success)
+            .AddClass("ui-survey-prompt__error", when: Type == PromptType.Error)
+            .AddClass("ui-survey-prompt__faktura", when: Type == PromptType.Faktura)
+            .AddClass("ui-survey-prompt__timebok", when: Type == PromptType.Timebok)
+            .Build();
+    }
+
+    public enum PromptType
+    {
+        Default,
+        Success,
+        Error,
+        Faktura,
+        Timebok
+    }
+}
